@@ -1,0 +1,28 @@
+<app-emp-logged-in-header></app-emp-logged-in-header>
+
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Dish Name</th>
+        <th>Veg/ Non Veg</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of orderList">
+      <tr>
+        <td>{{item.dishName}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="row">
+  <div class="col-xs-5"></div>
+  <div class="col-xs-2">
+    <button class="btn btn-success" (click)="pay()">Payment</button> 
+  </div>
+  <div class="col-xs-5"></div>
+</div>

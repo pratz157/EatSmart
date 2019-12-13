@@ -1,0 +1,57 @@
+<app-emp-logged-in-header></app-emp-logged-in-header>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<section id="option">
+    <div class="container my-3 py-5 text-center">
+        <div class="row mb-5">
+            <div class="col">
+                <h1>Our Menu</h1>
+                <p class="mt-3">
+                    Try our finger licking food!!!!
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4 col-md-5">
+                <div class="card">
+                    <div class="card-body" (click)="order_breakfast()">
+                        <img src="./assets/breakfast1.jfif" alt="Breakfast image"
+                            class="img-fluid img-rounded w-50 mb-3">
+                        <h3>Breakfast</h3>
+                        <h5>Canteen 1</h5>
+                        <p>Kick start your day with coffee and delicious food!!!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-5">
+                <div class="card">
+                    <div class="card-body" (click)="order_lunch()">
+                        <img src="./assets/breakfast1.jfif" alt="Breakfast image"
+                            class="img-fluid img-rounded w-50 mb-3">
+                        <h3>Lunch</h3>
+                        <h5>Canteen 1</h5>
+                        <p>Finally It's lunch time. Yayy!!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-5">
+                <div class="card">
+                    <div class="card-body" (click)="order_snacks()">
+                        <img src="./assets/breakfast1.jfif" alt="Breakfast image"
+                            class="img-fluid img-rounded w-50 mb-3">
+                        <h3>Snacks</h3>
+                        <h5>Canteen 1</h5>
+                        <p>Good Evening! How about garam pakodes and chai </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

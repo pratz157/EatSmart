@@ -1,0 +1,21 @@
+
+<div class="header">
+    <div class="row">
+        <div class="col xs-4 col-sm-4 col-md-4 col-lg-4">
+                <img src="./assets/logo.png" alt="Logo image" class="img-fluid img-rounded w-25 mb-3" (click)="loadHomePage()">
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        </div>
+        <div class="col-xs-4 col-sm-4  col-md-4 col-lg-4">
+            <button mat-button [matMenuTriggerFor]="menu" class="login_button btn " style="outline: none;">Login</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item class="login_button btn " (click)="emp_login()" style="outline: none;">Employee</button>
+                <button mat-menu-item class="login_button btn " (click)="canManager_login()" style="outline: none;">Canteen
+                    Manager</button>
+            </mat-menu>
+
+            <button mat-button class="signUp_button btn " (click)="signUp()" style="outline: none;">Sign Up</button>
+        </div>
+        
+    </div>
+</div>

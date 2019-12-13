@@ -1,0 +1,92 @@
+<app-can-manager-logged-in-header></app-can-manager-logged-in-header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col md-8">
+            <div >
+                <mat-tab-group #tabRef mat-align-tabs="center" (selectedTabChange)="uploadMenu(tabRef.selectedIndex)">
+                    <mat-tab label="Breakfast" >
+                        <h3 class="heading"> Breakfast Menu</h3>
+                        <div class="row defaultEntry">
+                            <div>
+                                <table class="table table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th>Dish Name</th>
+                                        <th>Veg/ Non Veg</th>
+                                        <th>Price</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody *ngFor="let item of current">
+                                      <tr>
+                                        <td>{{item.dishName}}</td>
+                                        <td>{{item.type}}</td>
+                                        <td>{{item.price}}</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <button class="btn btn-primary" (click)="openDialog()">Add Item</button>
+                        </div>
+                        <hr>
+                    </mat-tab>
+                    <mat-tab label="Lunch">
+                        <h3 class="heading" >Lunch Menu</h3>
+                        <div class="defaultEntry">
+                            <div>
+                                <table class="table table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th>Dish Name</th>
+                                        <th>Veg/ Non Veg</th>
+                                        <th>Price</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody *ngFor="let item of current">
+                                      <tr>
+                                        <td>{{item.dishName}}</td>
+                                        <td>{{item.type}}</td>
+                                        <td>{{item.price}}</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <button class="btn btn-primary" (click)="openDialog()">Add Item</button>
+                        </div>
+                        <hr>
+                    </mat-tab>
+                    <mat-tab label="Snacks">
+                        <h3 class="heading">Snacks Menu</h3>
+                        <div class="defaultEntry">
+                            <div>
+                                <table class="table table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th>Dish Name</th>
+                                        <th>Veg/ Non Veg</th>
+                                        <th>Price</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody *ngFor="let item of current">
+                                      <tr>
+                                        <td>{{item.dishName}}</td>
+                                        <td>{{item.type}}</td>
+                                        <td>{{item.price}}</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <button class="btn btn-primary" (click)="openDialog()">Add Item</button>
+                        </div>
+                        <hr>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+

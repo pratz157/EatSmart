@@ -1,0 +1,27 @@
+<h2 mat-dialog-title></h2>
+<mat-dialog-header>
+  <h3 style="text-align: center;">Add Item</h3>
+</mat-dialog-header>
+<mat-dialog-content>
+  <form #userForm ="ngForm">
+    <div class="form-group">
+      <label>Dish Name</label>
+      <input type="text" name="dish" [(ngModel)] = "item.dishName">
+    </div>
+    <div class="form-group">
+      <label>Veg/ Non-veg</label>
+      <select name="type" [(ngModel)] = "item.type">
+        <option value="veg">Veg</option>
+        <option value="nonVeg">Non-Veg</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Price</label><br>
+      <input type="text" name="price" [(ngModel)] = "item.price">
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="close()">Cancel</button>
+    <button mat-button (click)="save()">Save</button>
+</mat-dialog-actions>

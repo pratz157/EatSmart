@@ -1,0 +1,45 @@
+h1{
+    font-size : 36px;
+    color : #555;
+    font-weight: bold;
+}
+
+h3{
+    font-size :24px;
+    color: #333;
+    font-weight: bold;
+}
+
+#option img{
+    margin-top: 50px;
+}
+
+#option i{
+    font-size : 26px;
+    color: #555;;
+}
+
+#option p{
+    font-weight: 500;
+}
+
+#option .card{
+    margin-top: 10px;
+    border-radius: 0;
+    box-shadow: 5px 5px 15px #5cb85c;
+    transition : all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease in;
+    -moz-transition: all 0.3s ease in;
+}
+
+#option .card:hover{
+    background: #5cb85c;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 15px #9e9e9e;
+}
+
+#option .card:hover h3, #option .card:hover i{
+    color: white;
+}

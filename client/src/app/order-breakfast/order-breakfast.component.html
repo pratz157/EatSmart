@@ -1,0 +1,72 @@
+<app-emp-logged-in-header></app-emp-logged-in-header>
+
+
+<div class="row">
+  <div class="col-xs-5"></div>
+  <div class="col-xs-5"></div>
+  <div class="col-xs-2" (click)="checkout()">
+    <img src="./assets/shoppingCart.png" alt="Breakfast image" class="img-fluid img-rounded">
+    <p>Cart</p>
+  </div>
+</div>
+<h3 style="text-align: center">Menu</h3>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Dish Name</th>
+        <th>Veg/ Non Veg</th>
+        <th>Price</th>
+        <th>Add</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of current">
+      <tr>
+        <td>{{item.dishName}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.price}}</td>
+        <td><button class="btn btn-success" (click)="addItem(item)">Add</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="row">
+  <div class="col-xs-4"></div>
+  <div class="col-xs-4"></div>
+  <div class="col-xs-4">
+    <h3>
+      Total :{{total}}
+    </h3>
+  </div>
+</div>
+
+<hr>
+<h3 style="text-align: center">Your orders</h3>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Dish Name</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of inCart1">
+      <tr>
+        <td>{{item.dishName}}</td>
+        <td>{{item.price}}</td>
+        <td><button class="btn btn-danger" (click)="removeItem(item)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-5"></div>
+  <div class="col-xs-2">
+    <button class="btn btn-success" (click)="checkout()">Go To Cart</button>
+  </div>
+  <div class="col-xs-5"></div>
+</div>
