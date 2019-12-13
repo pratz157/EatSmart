@@ -8,3 +8,5 @@ Please go thorough following instruction to start using application.
 1. Clone the project
 2. run 'npm install' to get hold of all dependencies.
 3. run 'npm start' and you're good to go!!!
+
+Note : for devlopemnt run 'npm run dev'
