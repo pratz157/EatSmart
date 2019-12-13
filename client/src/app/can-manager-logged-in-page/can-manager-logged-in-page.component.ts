@@ -141,6 +141,11 @@ export class CanManagerLoggedInPageComponent implements OnInit {
     });
   }
 
+  remove = (e) =>{
+    let arr = this.current.concat([]);
+    this.current = arr.filter(i => i.dishName != e);
+  }
+
   uploadMenu(e){
     if(e == 0){
       this.upload_breakfast()
