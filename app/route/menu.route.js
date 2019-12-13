@@ -18,5 +18,10 @@ router.put('/', menu_details.update);
 // Delete a menu-item with Id
 router.delete('/:menuItemId', menu_details.delete);
 
+//Get Todays Menu
+router.get('/menu/today', menu_details.findTodayMenu);
+
+// Update todays menu
+router.put('/menu/today', menu_details.updateToday);
 
 module.exports = router;

@@ -11,10 +11,10 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.INTEGER
         },
         isToday: {
-            type: Sequelize.INTEGER
+            type: Sequelize.BOOLEAN
         },
         isAvailable: {
-            type: Sequelize.INTEGER
+            type: Sequelize.BOOLEAN
         },
     });
     
