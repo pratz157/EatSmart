@@ -18,6 +18,10 @@ export class EmpLoggedInHeaderComponent implements OnInit {
   }
 
   loadHomePage(){
+    this.router.navigate(['./emp_loggedIn'])
+  }
+
+  logOut(){
     this.router.navigate([''])
   }
 }

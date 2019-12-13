@@ -22,5 +22,7 @@ db.sequelize = sequelize;
 //Models/tables
 db.customers = require('../model/customer.model.js')(sequelize, Sequelize);
 db.menu_details = require('../model/menu.model.js')(sequelize, Sequelize);
- 
+db.employee_details = require('../model/emp.model.js')(sequelize, Sequelize);
+
+
 module.exports = db;

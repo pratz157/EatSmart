@@ -52,7 +52,7 @@ exports.findById = (req, res) => {
     res.json(menuItem);
   })
   .catch((err)=>{
-    res.status(404).json({sucess:false})
+    res.status(404).json({success:false})
     })
 };
  

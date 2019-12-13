@@ -7,16 +7,16 @@
             <h3>Employee Sign Up</h3>
 
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name *" [(ngModel)]="emp.name" />
+                <input type="text" class="form-control" placeholder="Name *" [(ngModel)]="e.empName" />
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Emp Id *" [(ngModel)]="emp.id"/>
+                <input type="number" class="form-control" placeholder="Your Emp Id *" [(ngModel)]="e.empId"/>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email *" [(ngModel)]="emp.mail"/>
+                <input type="text" class="form-control" placeholder="Your Email *" [(ngModel)]="e.empMail"/>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Your Password *" [(ngModel)]="emp.pswd" (blur)="encrpt()"/>
+                <input type="password" class="form-control" placeholder="Your Password *" [(ngModel)]="e.empPassword" (blur)="encrpt()"/>
             </div>
             <div class="form-group">
                 <!-- <input type="submit" class="btnSubmit" value="Login" /> -->

@@ -20,7 +20,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { AddItemComponent } from './add-item/add-item.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
-import { EmpSrvService } from './services/emp-srv.service';
+import { EmpSrvService } from './services/EmployeeService/emp-srv.service';
 
 
 

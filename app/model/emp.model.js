@@ -2,19 +2,20 @@ module.exports = (sequelize, Sequelize) => {
     const menuItelm = sequelize.define('employee_details', {
 
         empId: {
-            type: Sequelize.INTEGER
+            type: Sequelize.INTEGER,
+            primaryKey: true
         },
         empName: {
             type: Sequelize.STRING
         },
-        emp_mail: {
+        empMail: {
             type: Sequelize.STRING
         },
-        emp_password: {
+        empPassword: {
             type: Sequelize.STRING
         },
-        isAvailable: {
-            type: Sequelize.INTEGER
+        isVendor: {
+            type: Sequelize.BOOLEAN
         },
     });
     

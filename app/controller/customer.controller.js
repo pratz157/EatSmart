@@ -31,7 +31,7 @@ exports.findById = (req, res) => {
     res.json(customer);
   })
   .catch((err)=>{
-    res.status(404).json({sucess:false})
+    res.status(404).json({success:false})
     })
 };
  

@@ -7,6 +7,11 @@ const emp = require('../controller/emp.controller.js');
 router.post('/', emp.create);
  
 // Retrieve User
-router.get('/:menuItemId', emp.findById);
+router.get('/:empId', emp.findById);
+
+router.post('/validate',emp.validateUser);
+
+// router.get('/', emp.findAll);
+
 
 module.exports = router

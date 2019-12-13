@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EmpSrvService } from '../services/emp-srv.service';
+import { EmpSrvService } from '../services/EmployeeService/emp-srv.service';
+import {Router} from '@angular/router'
 
 
 @Component({
@@ -9,30 +10,37 @@ import { EmpSrvService } from '../services/emp-srv.service';
 })
 export class SignUpPageComponent implements OnInit {
 
-  constructor(private _empService :EmpSrvService) { }
+  constructor(private _empService :EmpSrvService,private router : Router) { }
 
-  public emp : Object;
+  public e = {
+    empId : undefined,
+    empName : "",
+    empMail : "",
+    empPassword : "",
+    isVendor : false
+  };
   public empFromService = [];
 
   ngOnInit() {
-    this.emp = {
-      name : "",
-      id : "",
-      mail : "",
-      pswd : ""
-    };
+    // this.emp = {
+    //   name : "",
+    //   id : "",
+    //   mail : "",
+    //   pswd : ""
+    // };
   }
 
   encrpt = () =>{
-    this.emp['pswd'] = btoa(this.emp['pswd']);
+    this.e.empPassword = btoa(this.e.empPassword);
   }
 
   SignUp = () =>{
-    if(this.validateInputs(this.emp)){
-      // console.log(this.emp);
-      this._empService.getEmployees().subscribe(data=> {
-        console.log("Data", data);
-        this.empFromService = data
+    if(this.validateInputs(this.e)){
+      console.log(this.e);
+      this._empService.addEmployee(this.e).subscribe(data=> {
+        if(data){
+          this.router.navigate(['/'])
+        }
       });
 
 
@@ -40,7 +48,7 @@ export class SignUpPageComponent implements OnInit {
   }
 
   validateInputs = (e) =>{
-    if(e.name && e.id && e.mail && e.pswd){
+    if(e.empId && e.empMail && e.empPassword){
       
       return true
     }

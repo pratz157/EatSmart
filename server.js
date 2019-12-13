@@ -22,6 +22,7 @@ db.sequelize.sync({force: false}).then(() => {
 
 app.use('/api/customers', require('./app/route/customer.route.js'));
 app.use('/api/menu_details', require('./app/route/menu.route.js'));
+app.use('/api/employee_details', require('./app/route/emp.route.js'));
  
 const port =  process.env.PORT || 2400;
 
